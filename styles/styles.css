@@ -1,18 +1,112 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-  font-family: "Outfit";
-  src: url(../font/Outfit-VariableFont_wght.ttf);
-  
+  font-family: "Montserrat", sans-serif;
+  src: url(../font/Montserrat-Bold.ttf);
 }
 
+:root {
+  --grey: #6c727f;
+  --grey-black: #394150;
+  --white: #fff;
+  --white-light: #f9fafb;
+  --cream: #e5e7eb;
+  --black: #000;
+  --blue: #284bce;
+  --btn-hover: #202b54;
+}
 
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+ 
+  margin-top: 120px;
+  max-width: 678px;
+}
+
+h1 {
+  font-size: 3rem; 
+  font-weight: 600;
+  padding: 16px;
+}
+.title {
+  font-size: 1.25rem; 
+  font-weight: 400;
+  color: var(--grey);
+  text-align: justify;
+  padding-bottom: 14px;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+input[placeholder] {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: var(--cream);
+  padding: 20px;
+}
+
+.btn {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--blue);
+  color: var(--white);
+  border: 0;
+  border-radius: 10px;
+  padding: 20px;
+}
+.btn:hover{
+  cursor: pointer;
+  background: var(--btn-hover);
+}
+
+.info {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--grey);
+  text-align: center;
+}
+
+.send-email {
+  max-width: 556px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px var(--black);
+}
 
 /* ================  FOOTER  ============== */
 
@@ -25,13 +119,24 @@ footer {
   align-items: center;
   gap: 5px;
   font-size: 1rem;
-  
 }
 .attribution p {
-  font-weight: 400;
+  font-weight: 600;
 }
 .attribution a {
   font-style: italic;
   text-decoration: none;
-  color: var(--btn-text); 
+  color: var(--blue);
+}
+
+@media screen and (max-width: 480px) and (min-width: 375px) {
+  .container {
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 2.25rem;
+  }
+  footer {
+    padding: 1.5rem;
+  }
 }
